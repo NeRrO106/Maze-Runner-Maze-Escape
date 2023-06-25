@@ -1,2 +1,2 @@
 # Games
-I will store all my games here. THX
+I will store the first game here.THX
