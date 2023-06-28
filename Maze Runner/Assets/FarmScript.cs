@@ -351,6 +351,7 @@ public class FarmScript : MonoBehaviour{
                 }
             }
         }
+        SavingSystem.SavePlayer(player);
     }
     IEnumerator CanCollectPlot(){
         yield return new WaitForSeconds(120f);

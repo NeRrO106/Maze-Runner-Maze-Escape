@@ -43,7 +43,7 @@
   </files>
   <settings>
     <setting name="androidAbis" value="armeabi-v7a,x86" />
-    <setting name="bundleId" value="com.Company.ProductName" />
+    <setting name="bundleId" value="com.Company.MazeRunnerMazeEscape" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
     <setting name="gradlePropertiesTemplateEnabled" value="False" />

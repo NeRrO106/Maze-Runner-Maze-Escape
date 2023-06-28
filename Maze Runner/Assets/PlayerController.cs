@@ -134,9 +134,9 @@ public class PlayerController : MonoBehaviour{
             sscript.Story();
         }
         Loading();
-        /*if(adready){
+        if(adready){
             StartCoroutine(IntercalateDelay()); 
-        }*/
+        }
         if(runner){
             zombietxt.SetActive(false);
             spidertxt.SetActive(false);
@@ -282,6 +282,21 @@ public class PlayerController : MonoBehaviour{
         }
         if(hunger == maxhunger){
             health -= takehealth;
+        }
+        if (craftaxe == 1){
+            axe.SetActive(true);
+            attackbutton.SetActive(true);
+            damage = 25f;
+        }
+        else{
+            axe.SetActive(false);
+            attackbutton.SetActive(false);
+        }
+        if (craftshield == 1){
+            shield.SetActive(true);
+        }
+        else{
+            shield.SetActive(false);
         }
     }
 

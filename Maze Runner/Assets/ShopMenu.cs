@@ -162,9 +162,11 @@ public class ShopMenu : MonoBehaviour{
         }
         if (player.builder){
             item14.SetActive(false);
+            item13.SetActive(true);
         }
         if(player.cook){
             item13.SetActive(false);
+            item14.SetActive(true);
         }
         if(player.craftaxe == 1 && player.craftshield == 1){
             craftingbtn.SetActive(false);
@@ -217,9 +219,16 @@ public class ShopMenu : MonoBehaviour{
                 infotext.text = "Key5 bought".ToString();
                 infoon=true;
             }
+            SavingSystem.SavePlayer(player);
+            item1.SetActive(false);
         }
-        SavingSystem.SavePlayer(player);
-        item1.SetActive(false);
+        else{
+            if (!infoon){
+                infobg.SetActive(true);
+                infotext.text = "You need 5 coins or you already have that key".ToString();
+                infoon = true;
+            }
+        }
     }
     public void BuyKey6(){
         click.Play();
@@ -235,9 +244,16 @@ public class ShopMenu : MonoBehaviour{
                 infotext.text = "Key6 bought".ToString();
                 infoon=true;
             }
+            SavingSystem.SavePlayer(player);
+            item2.SetActive(false);
         }
-        SavingSystem.SavePlayer(player);
-        item2.SetActive(false);
+        else{
+            if (!infoon){
+                infobg.SetActive(true);
+                infotext.text = "You need 5 coins or you already have that key".ToString();
+                infoon = true;
+            }
+        }
     }
     public void BuyKey7(){
         click.Play();
@@ -253,9 +269,16 @@ public class ShopMenu : MonoBehaviour{
                 infotext.text = "Key7 bought".ToString();
                 infoon=true;
             }
+            SavingSystem.SavePlayer(player);
+            item3.SetActive(false);
         }
-        SavingSystem.SavePlayer(player);
-        item3.SetActive(false);
+        else{
+            if (!infoon){
+                infobg.SetActive(true);
+                infotext.text = "You need 5 coins or you already have that key".ToString();
+                infoon = true;
+            }
+        }
     }
     public void BuyKey8(){
         click.Play();
@@ -271,9 +294,16 @@ public class ShopMenu : MonoBehaviour{
                 infotext.text = "Key8 bought".ToString();
                 infoon=true;
             }
+            SavingSystem.SavePlayer(player);
+            item4.SetActive(false);
         }
-        SavingSystem.SavePlayer(player);
-        item4.SetActive(false);
+        else{
+            if (!infoon){
+                infobg.SetActive(true);
+                infotext.text = "You need 5 coins or you already have that key".ToString();
+                infoon = true;
+            }
+        }
     }
     public void BuyKey9(){
         click.Play();
@@ -289,9 +319,16 @@ public class ShopMenu : MonoBehaviour{
                 infotext.text = "Key9 bought".ToString();
                 infoon=true;
             }
+            SavingSystem.SavePlayer(player);
+            item5.SetActive(false);
         }
-        SavingSystem.SavePlayer(player);
-        item5.SetActive(false);
+        else{
+            if (!infoon){
+                infobg.SetActive(true);
+                infotext.text = "You need 5 coins or you already have that key".ToString();
+                infoon = true;
+            }
+        }
     }
     public void BuyKey10(){
         click.Play();
@@ -307,9 +344,16 @@ public class ShopMenu : MonoBehaviour{
                 infotext.text = "Key10 bought".ToString();
                 infoon=true;
             }
+            SavingSystem.SavePlayer(player);
+            item6.SetActive(false);
         }
-        SavingSystem.SavePlayer(player);
-        item6.SetActive(false);
+        else{
+            if (!infoon){
+                infobg.SetActive(true);
+                infotext.text = "You need 5 coins or you already have that key".ToString();
+                infoon = true;
+            }
+        }
     }
     public void BuyKey11(){
         click.Play();
@@ -325,9 +369,16 @@ public class ShopMenu : MonoBehaviour{
                 infotext.text = "Key11 bought".ToString();
                 infoon=true;
             }
+            SavingSystem.SavePlayer(player);
+            item7.SetActive(false);
         }
-        SavingSystem.SavePlayer(player);
-        item7.SetActive(false);
+        else{
+            if (!infoon){
+                infobg.SetActive(true);
+                infotext.text = "You need 5 coins or you already have that key".ToString();
+                infoon = true;
+            }
+        }
     }
     public void BuyKey12(){
         click.Play();
@@ -343,9 +394,16 @@ public class ShopMenu : MonoBehaviour{
                 infotext.text = "Key12 bought".ToString();
                 infoon=true;
             }
+            SavingSystem.SavePlayer(player);
+            item8.SetActive(false);
         }
-        SavingSystem.SavePlayer(player);
-        item8.SetActive(false);
+        else{
+            if (!infoon){
+                infobg.SetActive(true);
+                infotext.text = "You need 5 coins or you already have that key".ToString();
+                infoon = true;
+            }
+        }
     }
     public void BuyPotionRed(){
         click.Play();
@@ -393,15 +451,29 @@ public class ShopMenu : MonoBehaviour{
                 player.coins -= 5;
                 crafting = true;
                 craft.Play();
+                SavingSystem.SavePlayer(player);
+                item11.SetActive(false);
                 if(!infoon){
                     infobg.SetActive(true);
                     infotext.text = "Axe crafted".ToString();
                     infoon=true;
                 }
             }
+            else{
+                if (!infoon){
+                    infobg.SetActive(true);
+                    infotext.text = "You need 3 axes part or you already crafted one axe".ToString();
+                    infoon = true;
+                }
+            }
         }
-        SavingSystem.SavePlayer(player);
-        item11.SetActive(true);
+        else{
+            if (!infoon){
+                infobg.SetActive(true);
+                infotext.text = "You need 5 coins to do this action".ToString();
+                infoon = true;
+            }
+        }
     }
     public void CraftShield(){
         click.Play();
@@ -413,15 +485,29 @@ public class ShopMenu : MonoBehaviour{
                 player.coins -= 5;
                 crafting = true;
                 craft.Play();
+                SavingSystem.SavePlayer(player);
+                item11.SetActive(false);
                 if(!infoon){
                     infobg.SetActive(true);
                     infotext.text = "Shield crafted".ToString();
                     infoon=true;
                 }
             }
+            else{
+                if (!infoon){
+                    infobg.SetActive(true);
+                    infotext.text = "You need 3 shields part or you already crafted one shield".ToString();
+                    infoon = true;
+                }
+            }
         }
-        SavingSystem.SavePlayer(player);
-        item11.SetActive(true);
+        else{
+            if (!infoon){
+                infobg.SetActive(true);
+                infotext.text = "You need 5 coins to do this action".ToString();
+                infoon = true;
+            }
+        }
     }
     public void SellLogs(){
         click.Play();
